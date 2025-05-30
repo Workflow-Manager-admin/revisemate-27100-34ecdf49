@@ -84,7 +84,9 @@ function MainContainer() {
         const page = await pdf.getPage(i);
         const content = await page.getTextContent();
         const pageText = content.items.map((item) => item.str).join(' ');
-        fullText += pageText + '\n\n';
+        fullText += `${pageText}
+
+`;
       }
       return fullText;
     } catch (err) {
