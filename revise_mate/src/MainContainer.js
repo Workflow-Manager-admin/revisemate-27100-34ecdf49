@@ -94,7 +94,7 @@ function MainContainer() {
   // Loads mammoth.js dynamically and extracts text from DOCX
   async function extractTextFromDOCX(arrayBuffer) {
     try {
-      const mammoth = await import('mammoth/mammoth.browser');
+      const mammoth = await import('mammoth');
       const result = await mammoth.extractRawText({ arrayBuffer });
       return result.value;
     } catch (err) {
