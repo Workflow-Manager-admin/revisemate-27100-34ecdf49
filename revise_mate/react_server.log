@@ -383,3 +383,20 @@ src/MainContainer.js
   Line 84:31:  Parsing error: Unterminated string constant. (84:31)
 
 webpack compiled with 2 errors
+Compiling...
+Compiled with warnings.
+
+Module not found: Error: Can't resolve 'pdfjs-dist/build/pdf' in '/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/src'
+
+Module not found: Error: Can't resolve 'mammoth' in '/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/src'
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./src/MainContainer.js 95:25-55
+Module not found: Error: Can't resolve 'pdfjs-dist/build/pdf' in '/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/src'
+
+WARNING in ./src/MainContainer.js 121:28-45
+Module not found: Error: Can't resolve 'mammoth' in '/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/src'
+
+webpack compiled with 2 warnings

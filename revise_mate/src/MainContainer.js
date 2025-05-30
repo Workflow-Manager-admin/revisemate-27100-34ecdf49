@@ -69,11 +69,14 @@ function MainContainer() {
   // Loads pdfjs-dist dynamically and extracts text from PDF
   async function extractTextFromPDF(arrayBuffer) {
     try {
-      const pdfjsLib = await import('pdfjs-dist/build/pdf');
-      // use pdf.worker.min.js from unpkg CDN
-      pdfjsLib.GlobalWorkerOptions.workerSrc =
-        'https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
-
+      let pdfjsLib;
+      try {
+        pdfjsLib = await import('pdfjs-dist/build/pdf');
+      } catch {
+        throw new Error('Failed to load pdfjs-dist for PDF extraction.');
+      }
+      // Assign workerSrc using a single string line to avoid unterminated errors
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
       const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
       const pdf = await loadingTask.promise;
       let fullText = '';
@@ -81,9 +84,7 @@ function MainContainer() {
         const page = await pdf.getPage(i);
         const content = await page.getTextContent();
         const pageText = content.items.map((item) => item.str).join(' ');
-        fullText += pageText + '
-
-';
+        fullText += pageText + '\n\n';
       }
       return fullText;
     } catch (err) {
