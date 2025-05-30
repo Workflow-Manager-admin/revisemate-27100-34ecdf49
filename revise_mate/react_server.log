@@ -237,3 +237,76 @@ src/MainContainer.js
   Line 84:31:  Parsing error: Unterminated string constant. (84:31)
 
 webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/MainContainer.js
+Syntax error: Unterminated string constant. (84:31) (84:31)
+ERROR in ./src/MainContainer.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/src/MainContainer.js: Unterminated string constant. (84:31)
+
+  82 |         const content = await page.getTextContent();
+  83 |         const pageText = content.items.map((item) => item.str).join(' ');
+> 84 |         fullText += pageText + '
+     |                                ^
+  85 |
+  86 | ';
+  87 |       }
+    at constructor (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:360:19)
+    at FlowParserMixin.raise (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:3327:19)
+    at Object.unterminated (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:2395:20)
+    at readStringContents (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:2137:16)
+    at FlowParserMixin.readString (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:3226:9)
+    at FlowParserMixin.getTokenFromCode (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:2986:14)
+    at FlowParserMixin.getTokenFromCode (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:6970:11)
+    at FlowParserMixin.getTokenFromCode (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:5419:13)
+    at FlowParserMixin.nextToken (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:2510:10)
+    at FlowParserMixin.next (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:2423:10)
+    at FlowParserMixin.parseExprOp (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:10616:14)
+    at FlowParserMixin.parseExprOps (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:10585:17)
+    at FlowParserMixin.parseMaybeConditional (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:10558:23)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:10521:21)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:5773:18)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:10547:25)
+    at FlowParserMixin.parseMaybeAssign (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:5773:18)
+    at FlowParserMixin.parseExpressionBase (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:10475:23)
+    at /home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:10471:39
+    at FlowParserMixin.allowInAnd (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12095:16)
+    at FlowParserMixin.parseExpression (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:10471:17)
+    at FlowParserMixin.parseStatementContent (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12539:23)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12406:17)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:5140:24)
+    at FlowParserMixin.parseStatementListItem (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12386:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12960:61)
+    at FlowParserMixin.parseBlockBody (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12953:10)
+    at FlowParserMixin.parseBlock (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12941:10)
+    at FlowParserMixin.parseStatementContent (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12496:21)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12406:17)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:5140:24)
+    at FlowParserMixin.parseStatement (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12399:17)
+    at /home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12989:68
+    at FlowParserMixin.withSmartMixTopicForbiddingContext (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12077:14)
+    at FlowParserMixin.parseFor (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12989:22)
+    at FlowParserMixin.parseForStatement (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12736:21)
+    at FlowParserMixin.parseStatementContent (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12424:21)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12406:17)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:5140:24)
+    at FlowParserMixin.parseStatementListItem (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12386:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12960:61)
+    at FlowParserMixin.parseBlockBody (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12953:10)
+    at FlowParserMixin.parseBlock (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12941:10)
+    at FlowParserMixin.parseTryStatement (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12849:23)
+    at FlowParserMixin.parseStatementContent (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12443:21)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12406:17)
+    at FlowParserMixin.parseStatementLike (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:5140:24)
+    at FlowParserMixin.parseStatementListItem (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12386:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12960:61)
+    at FlowParserMixin.parseBlockBody (/home/kavia/workspace/code-generation/revisemate-27100-34ecdf49/revise_mate/node_modules/@babel/parser/lib/index.js:12953:10)
+
+ERROR in [eslint] 
+src/MainContainer.js
+  Line 84:31:  Parsing error: Unterminated string constant. (84:31)
+
+webpack compiled with 2 errors
